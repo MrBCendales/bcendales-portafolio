@@ -1,10 +1,30 @@
+import React from "react";
+import "./rouletteWheel.styles.scss";
+
 const RouletteWheel = ({ options, onSpin, isSpinning }) => {
+  const segmentAngle = 360 / options.length;
+
   return (
-    <div className="roulette-wheel">
-      {/* This is where your spinning wheel visual will go */}
-      <div className="wheel-container">{/* Wheel visualization here */}</div>
-      <button onClick={onSpin} disabled={options.length === 0 || isSpinning}>
-        {isSpinning ? "Spinning..." : "Spin the Roulette"}
+    <div className="roulette-container">
+      <div className="wheel">
+        {options.map((option, index) => {
+          const rotation = segmentAngle * index;
+          return (
+            <div
+              key={index}
+              className="wheel-segment"
+              style={{
+                transform: `rotate(${rotation}deg)`,
+                backgroundColor: `hsl(${(index / options.length) * 360}, 70%, 60%)`,
+              }}
+            >
+              <span className="segment-text">{option}</span>
+            </div>
+          );
+        })}
+      </div>
+      <button onClick={onSpin} disabled={isSpinning}>
+        {isSpinning ? "Spinning..." : "Spin!"}
       </button>
     </div>
   );
