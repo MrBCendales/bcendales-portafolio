@@ -12,7 +12,7 @@ const TextInput = ({ onAddOption }) => {
       setInputValue("");
     }
   };
-
+  console.log();
   return (
     <div>
       <input
