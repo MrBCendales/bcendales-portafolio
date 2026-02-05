@@ -1,8 +1,6 @@
 import "./styles/winnerDisplay.styles.scss";
 
-import { ReactComponent as RemoveIcon } from "../images/icons/trash-bin.svg";
 import { ReactComponent as CloseIcon } from "../images/icons/close-icon.svg";
-import { Fragment } from "react/jsx-runtime";
 import HappyPepe from "../images/icons/Happy_pepe.png";
 
 const WinnerDisplay = ({ winner, winnerIndex, onRemove, onClose }) => {
