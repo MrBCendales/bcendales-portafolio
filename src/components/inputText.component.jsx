@@ -12,7 +12,6 @@ const TextInput = ({ onAddOption, disabled }) => {
       setInputValue("");
     }
   };
-  console.log();
   return (
     <div>
       <input

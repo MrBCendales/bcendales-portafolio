@@ -100,7 +100,7 @@ const Roulette = () => {
       </div>
       <div className="right-panel">
         {/* Only show wheel if there are options */}
-        {optionsArray.length > 0 && (
+        {optionsArray.length > 0 ? (
           <div
             className="wheel-container"
             onClick={!isSpinning ? handleSpin : null}
@@ -118,6 +118,12 @@ const Roulette = () => {
                 setShowWinner(true);
               }}
             />
+          </div>
+        ) : (
+          <div className="empty-state">
+            <h2 className="empty-state-text">
+              Add options in the other pannel to get started!
+            </h2>
           </div>
         )}
         {!isSpinning && showWinner && (
