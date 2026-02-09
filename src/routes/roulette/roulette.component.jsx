@@ -16,7 +16,6 @@ const generateWinningNumber = (optionsObject) => {
   const randomNumber = Math.random();
   const optArray = optionsObject.map((option) => option.option);
   let winnerIndex = Math.floor(randomNumber * optArray.length);
-  console.log(winnerIndex);
   if (optArray.includes("Emma") && randomNumber < 0.75) {
     winnerIndex = optArray.findIndex((option) => option === "Emma");
   }
