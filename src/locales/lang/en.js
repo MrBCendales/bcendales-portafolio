@@ -1,0 +1,38 @@
+export const EN = {
+  HOME: {
+    HERO: {
+      TITLE: "Hi, I'm Bryan Cendales",
+      SUBTITLE: "Full-Stack Developer",
+      DESCRIPTION:
+        "I'm a graduated electrical engineer who transitioned into full-stack development. I build interactive web applications with React and I'm expanding into Python and AWS.",
+    },
+    TECH_STACK: {
+      TITLE: "Tech Stack",
+      LEARNING: "Learning",
+    },
+    PROJECTS: {
+      TITLE: "My Projects",
+      TRY_LIVE: "Try it Live →",
+      PROJECTS_DATA: [
+        {
+          TITLE: "Roulette",
+          DESCRIPTION:
+            "An interactive spinning wheel to make random selections to play.",
+          TECH: ["React", "SCSS"],
+        },
+        {
+          TITLE: "Payment Reminder",
+          DESCRIPTION:
+            "A family-oriented economy manager to check your monthly payments and card subscriptions.",
+          TECH: ["React", "SCSS"],
+        },
+        {
+          TITLE: "Simple Kitchen",
+          DESCRIPTION:
+            "Friendly, simple cooking manager for weekly recipes. Add prices and shopping lists to prepare before going to the mall.",
+          TECH: ["React", "SCSS"],
+        },
+      ],
+    },
+  },
+};

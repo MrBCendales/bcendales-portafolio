@@ -1,26 +1,25 @@
 import { Link } from "react-router-dom";
+import { EN } from "../../locales/lang/en";
 import "./homepage.styles.scss";
 
 const HomePage = () => {
+  const STRINGS = EN.HOME; // 'T' for 'TEXTS'
+
   return (
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <h1 className="hero-title">Hi, I'm Bryan Cendales</h1>
-          <h2 className="hero-subtitle">Full-Stack Developer</h2>
-          <p className="hero-description">
-            I'm a graduated electrical engineer who transitioned into full-stack
-            development. I build interactive web applications with React and I'm
-            expanding into Python and AWS.
-          </p>
+          <h1 className="hero-title">{STRINGS.HERO.TITLE}</h1>
+          <h2 className="hero-subtitle">{STRINGS.HERO.SUBTITLE}</h2>
+          <p className="hero-description">{STRINGS.HERO.DESCRIPTION}</p>
         </div>
       </section>
 
       {/* Tech Stack Section */}
       <section className="tech-section">
         <div className="section-container">
-          <h2 className="section-title">Tech Stack</h2>
+          <h2 className="section-title">{STRINGS.TECH_STACK.TITLE}</h2>
           <div className="tech-grid">
             <div className="tech-card">
               <span className="tech-name">React</span>
@@ -33,11 +32,15 @@ const HomePage = () => {
             </div>
             <div className="tech-card">
               <span className="tech-name">Python</span>
-              <span className="learning-badge">Learning</span>
+              <span className="learning-badge">
+                {STRINGS.TECH_STACK.LEARNING}
+              </span>
             </div>
             <div className="tech-card">
               <span className="tech-name">AWS</span>
-              <span className="learning-badge">Learning</span>
+              <span className="learning-badge">
+                {STRINGS.TECH_STACK.LEARNING}
+              </span>
             </div>
           </div>
         </div>
@@ -46,59 +49,71 @@ const HomePage = () => {
       {/* Projects Section */}
       <section className="projects-section">
         <div className="section-container">
-          <h2 className="section-title">My Projects</h2>
+          <h2 className="section-title">{STRINGS.PROJECTS.TITLE}</h2>
           <div className="projects-grid">
             {/* Roulette Project */}
             <div className="project-card">
               <div className="project-info">
-                <h3 className="project-title">Roulette</h3>
+                <h3 className="project-title">
+                  {STRINGS.PROJECTS.PROJECTS_DATA[0].TITLE}
+                </h3>
                 <p className="project-description">
-                  An interactive spinning wheel to make random selections to
-                  play.
+                  {STRINGS.PROJECTS.PROJECTS_DATA[0].DESCRIPTION}
                 </p>
                 <div className="project-tech">
-                  <span className="tech-badge">React</span>
-                  <span className="tech-badge">SCSS</span>
+                  {STRINGS.PROJECTS.PROJECTS_DATA[0].TECH.map((tech, index) => (
+                    <span key={index} className="tech-badge">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
               <Link to="/roulette" className="project-button">
-                Try it Live →
+                {STRINGS.PROJECTS.TRY_LIVE}
               </Link>
             </div>
 
             {/* Payment Reminder Project */}
             <div className="project-card">
               <div className="project-info">
-                <h3 className="project-title">Payment Reminder</h3>
+                <h3 className="project-title">
+                  {STRINGS.PROJECTS.PROJECTS_DATA[1].TITLE}
+                </h3>
                 <p className="project-description">
-                  A family-oriented economy manager to check your monthly
-                  payments and card subscriptions.
+                  {STRINGS.PROJECTS.PROJECTS_DATA[1].DESCRIPTION}
                 </p>
                 <div className="project-tech">
-                  <span className="tech-badge">React</span>
-                  <span className="tech-badge">SCSS</span>
+                  {STRINGS.PROJECTS.PROJECTS_DATA[1].TECH.map((tech, index) => (
+                    <span key={index} className="tech-badge">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
               <Link to="/payment-reminder" className="project-button">
-                Try it Live →
+                {STRINGS.PROJECTS.TRY_LIVE}
               </Link>
             </div>
 
             {/* Simple Kitchen Project */}
             <div className="project-card">
               <div className="project-info">
-                <h3 className="project-title">Simple Kitchen</h3>
+                <h3 className="project-title">
+                  {STRINGS.PROJECTS.PROJECTS_DATA[2].TITLE}
+                </h3>
                 <p className="project-description">
-                  Friendly, simple cooking manager for weekly recipes. Add
-                  prices and shopping lists to prepare before going to the mall.
+                  {STRINGS.PROJECTS.PROJECTS_DATA[2].DESCRIPTION}
                 </p>
                 <div className="project-tech">
-                  <span className="tech-badge">React</span>
-                  <span className="tech-badge">SCSS</span>
+                  {STRINGS.PROJECTS.PROJECTS_DATA[2].TECH.map((tech, index) => (
+                    <span key={index} className="tech-badge">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
               <Link to="/simple-kitchen" className="project-button">
-                Try it Live →
+                {STRINGS.PROJECTS.TRY_LIVE}
               </Link>
             </div>
           </div>
