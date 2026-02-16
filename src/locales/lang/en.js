@@ -44,5 +44,19 @@ export const STRINGS_EN = {
         },
       ],
     },
+    CONTACT: {
+      TITLE: "Let's Connect",
+      DESCRIPTION:
+        "I'm always open to new opportunities and collaborations. Feel free to reach out!",
+      EMAIL: "your.email@example.com", // ← Cambia esto con tu email real
+      LINKS: [
+        { NAME: "GitHub", URL: "https://github.com/yourusername" }, // ← Cambia con tus links reales
+        { NAME: "LinkedIn", URL: "https://linkedin.com/in/yourusername" },
+      ],
+    },
+    FOOTER: {
+      COPYRIGHT: "© 2025 Bryan Cendales. All rights reserved.",
+      MADE_WITH: "Made with React & ❤️",
+    },
   },
 };

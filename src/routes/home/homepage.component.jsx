@@ -67,6 +67,38 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      {/* Contact Section */}
+      <section className="contact-section">
+        <div className="section-container">
+          <h2 className="section-title">{STRINGS.CONTACT.TITLE}</h2>
+          <p className="contact-description">{STRINGS.CONTACT.DESCRIPTION}</p>
+          <div className="contact-links">
+            <a
+              href={`mailto:${STRINGS.CONTACT.EMAIL}`}
+              className="contact-button"
+            >
+              📧 Email Me
+            </a>
+            {STRINGS.CONTACT.LINKS.map((link, index) => (
+              <a
+                key={index}
+                href={link.URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-button"
+              >
+                {link.NAME}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p className="footer-copyright">{STRINGS.FOOTER.COPYRIGHT}</p>
+        <p className="footer-made">{STRINGS.FOOTER.MADE_WITH}</p>
+      </footer>
     </div>
   );
 };
