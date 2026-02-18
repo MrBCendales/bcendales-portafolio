@@ -1,6 +1,7 @@
 import Navigation from "../components/navigation/navigation.component";
 import { Outlet } from "react-router-dom";
 import { Fragment } from "react/jsx-runtime";
+import Footer from "../components/footer/footer.component";
 
 import "./mainlayout.styles.scss";
 
@@ -11,6 +12,7 @@ const MainLayout = () => {
       <main className="main-content">
         <Outlet />
       </main>
+      <Footer />
     </Fragment>
   );
 };

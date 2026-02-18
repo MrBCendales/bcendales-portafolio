@@ -1,16 +1,12 @@
 import { Link } from "react-router-dom";
 import { STRINGS_EN } from "../../locales/lang/en";
 import "./homepage.styles.scss";
-import { useEffect } from "react";
 
 const HomePage = () => {
   const STRINGS = STRINGS_EN.HOME;
   const TECH_PROJECTS = STRINGS.PROJECTS.PROJECTS_DATA;
   const TECH_STACK = STRINGS.TECH_STACK.STACK;
 
-  useEffect(() => {
-    console.log(STRINGS.PROJECTS.PROJECTS_DATA);
-  }, []);
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -93,12 +89,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <p className="footer-copyright">{STRINGS.FOOTER.COPYRIGHT}</p>
-        <p className="footer-made">{STRINGS.FOOTER.MADE_WITH}</p>
-      </footer>
     </div>
   );
 };

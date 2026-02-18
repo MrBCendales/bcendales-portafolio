@@ -11,11 +11,11 @@ $bg-light: #f5f7fa;
 .hero-section {
   min-height: 50vh;
   display: flex;
-  padding-top: 10vh;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 2rem;
+  padding-top: 10vh;
 
   .hero-content {
     max-width: 800px;
@@ -284,35 +284,6 @@ $bg-light: #f5f7fa;
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
       }
-    }
-  }
-}
-
-// Footer
-.footer {
-  background: $text-color;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-
-  .footer-copyright {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    opacity: 0.9;
-  }
-
-  .footer-made {
-    font-size: 0.9rem;
-    opacity: 0.7;
-  }
-
-  @media (max-width: 768px) {
-    .footer-copyright {
-      font-size: 0.9rem;
-    }
-
-    .footer-made {
-      font-size: 0.8rem;
     }
   }
 }
